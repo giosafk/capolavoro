@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+header {
+    background: #8a5228;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+header .logo {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+header nav ul {
+    display: flex;
+}
+header nav ul li a {
+    display: inline-block;
+    color: #000;
+    font-size: 25px;
+    padding: 5px 0;
+    margin: 0 10px;
+    border: 3px solid transparent;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+header nav ul li a:hover,
+header nav ul li a.active {
+    border-bottom-color: #a17553;
+}
+.hamburger {
+    cursor: pointer;
+    display: none;
+}
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background: #000;
+}
+@media only screen and (max-width: 900px) {
+    header {
+        padding: 0 30px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .hamburger {
+        display: block;
+    }
+    header nav {
+        position: absolute;
+        width: 100%;
+        left: -100%;
+        top: 70px;
+        width: 100%;
+        background: #fff;
+        padding: 30px;
+        transition: 0.3s;
+    }
+    header #nav_check:checked ~ nav {
+        left: 0;
+    }
+    header nav ul {
+        display: block;
+    }
+    header nav ul li a {
+        margin: 5px 0;
+    }
+}
+
+body{
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+background-size: cover;
+backdrop-filter: blur(5px);
+font-family: 'poppins',sans-serif;
+font-size: 18px;
+}
+.container{
+max-width: 2000px;
+margin: auto;
+background-color: #F3EDC8;
+align-items: center;
+justify-content: center;
+}
+
+.section{
+height: 90vh;
+}
+
+.wrapper {
+    justify-content: center;
+    width: 300px;
+    flex-wrap: wrap;
+    margin-left: 50px;
+
+    display: grid;
+    justify-items: center;
+}
+
+.card {
+    width: 350px;
+    height: 350px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 2rem 1rem;
+    position: relative;
+    transition: 0.5s all ease-in-out;
+    margin: 10px;
+
+    font-size: 18px; /* Dimensione del carattere dei paragrafi */
+    width: 80%; /* Larghezza fissa per i paragrafi */
+    margin-top: 10px; /* Spazio sopra il paragrafo */
+    margin-left: 200px;
+    padding: 10px; /* Aggiunge spazio intorno al testo */
+    border-radius: 10px; /* Arrotonda gli angoli dei paragrafi */
+    text-align: center;
+}
+.card:hover {
+	transform: translateY(-10px);
+}
+.card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, rgba(13, 36, 63, 0.3), rgba(13, 36, 63, 1));
+	z-index: 2;
+	opacity: 0;
+	transition: 0.5s all;
+}
+.card:hover::before {
+	opacity: 1;
+}
+
+.card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.card .info {
+	position: relative;
+	color: #fff;
+	z-index: 3;
+	opacity: 0;
+	transform: translateY(30px);
+	transition: 0.5s all;
+}
+.card:hover .info {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.card .info h1 {
+	line-height: 40px;
+	margin-bottom: 10px;
+}
+.card .info p {
+	font-size: 15px;
+	letter-spacing: 1px;
+	margin-bottom: 20px;
+}
+.card .info .btn {
+	background: #fff;
+	padding: 0.5rem 1rem;
+	color: #000;
+	font-size: 12px;
+	cursor: pointer;
+	border-radius: 20px;
+	text-decoration: none;
+	font-weight: bold;
+	transition: .4s ease-in-out;
+    align-items: center;
+}
+.card .info .btn:hover {
+	background: #fc5185;
+	color: #fff;
+	box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+footer{
+    background-color: #111;
+}
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px ;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0,9;
+}
+/* Hover affect on social media icon */
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+.footerNav{
+    margin: 30px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color:white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+.footerBottom{
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p{
+    color: white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    } 
+    .footerNav ul li{
+        width:100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .socialIcons a{
+        padding: 8px;
+        margin: 4px;
+    }
+}
+
+
+
+.contatti2 {
+    height: 1200px;
+    background-image: url(kendrick\ lamar\ home.png);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    text-align: center;
+    padding: 80px;
+    position: relative; /* Posizionamento relativo per consentire il posizionamento assoluto degli elementi figlio */
+}
+
+/* Aggiungi una trasparenza scura sull'immagine di sfondo */
+.contatti2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+
+
+.titolo-contatti span{
+    color: #fff;
+}
+
+.titolo-contatti {
+    font-size: 50px; 
+    color:  #7D0A0A; 
+    letter-spacing: 1,6px;
+    position: relative;
+    z-index: 1; 
+    }
+
+.body-contatti section form {
+    max-width: 1000px;
+    text-align: center;
+    margin: 1rem auto;
+    margin-bottom: 10px;
+}
+.input-box-contatti{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.body-contatti form input,textarea{
+    width: 100%;
+    padding: 1.5rem;
+    background: rgba(255,255,255,.1);
+    border: .2rem solid rgba(255,255,255,.09);
+    outline: none;
+    backdrop-filter: blur(10px);
+    filter: drop-shadow( 0 0 100px  #7D0A0A);
+    color: #fff;
+    border-radius: .8rem;
+    gap: 2.5rem;
+    margin: .7rem 0;
+    transition: .5s ease;
+}
+.body-contatti input::placeholder{
+    font-size: 20px;
+    letter-spacing: .02rem;
+}
+.body-contatti form input{
+    width: 49%;
+}
+.input-box-contatti input:focus,
+.input-box-contatti input:valid{
+    border: .2rem solid  #7D0A0A;
+}
+.body-contatti textarea{
+    resize: none;
+}
+.body-contatti textarea:focus,
+textarea:valid{
+    border: .2rem solid  #7D0A0A;
+}
+.btn{
+    margin-top: 2rem;
+    cursor: pointer;
+    filter: none;
+    font-size: large;
+}
+.btn:hover{
+    background:  #7D0A0A;
+    box-shadow:  0 0 .3rem  #7D0A0A,
+    0 0 .7rem  #7D0A0A;
+}
+
+.contatti2 textarea {
+    font-size: 15px; 
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+}
